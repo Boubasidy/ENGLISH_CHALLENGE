@@ -1,0 +1,7 @@
+/Users/boubacarsidybarry/Desktop/INSA/SEMESTRE6/ENGLISH_CHALLENGE/QUARTO_GAME/QUARTO_GAME/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/QUARTO_GAME.dir
+/Users/boubacarsidybarry/Desktop/INSA/SEMESTRE6/ENGLISH_CHALLENGE/QUARTO_GAME/QUARTO_GAME/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/edit_cache.dir
+/Users/boubacarsidybarry/Desktop/INSA/SEMESTRE6/ENGLISH_CHALLENGE/QUARTO_GAME/QUARTO_GAME/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/rebuild_cache.dir
+/Users/boubacarsidybarry/Desktop/INSA/SEMESTRE6/ENGLISH_CHALLENGE/QUARTO_GAME/QUARTO_GAME/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/list_install_components.dir
+/Users/boubacarsidybarry/Desktop/INSA/SEMESTRE6/ENGLISH_CHALLENGE/QUARTO_GAME/QUARTO_GAME/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/install.dir
+/Users/boubacarsidybarry/Desktop/INSA/SEMESTRE6/ENGLISH_CHALLENGE/QUARTO_GAME/QUARTO_GAME/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/install/local.dir
+/Users/boubacarsidybarry/Desktop/INSA/SEMESTRE6/ENGLISH_CHALLENGE/QUARTO_GAME/QUARTO_GAME/build/Qt_6_8_0_for_macOS-Debug/CMakeFiles/install/strip.dir

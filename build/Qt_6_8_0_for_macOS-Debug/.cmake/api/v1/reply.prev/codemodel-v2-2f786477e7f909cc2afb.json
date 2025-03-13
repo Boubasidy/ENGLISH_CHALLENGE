@@ -1,0 +1,61 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-8906ea7a9cba61f5ef97.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "QUARTO_GAME",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "QUARTO_GAME::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QUARTO_GAME-Debug-38ae6c0a2629fa55c875.json",
+					"name" : "QUARTO_GAME",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/boubacarsidybarry/Desktop/INSA/SEMESTRE6/ENGLISH_CHALLENGE/QUARTO_GAME/QUARTO_GAME/build/Qt_6_8_0_for_macOS-Debug",
+		"source" : "/Users/boubacarsidybarry/Desktop/INSA/SEMESTRE6/ENGLISH_CHALLENGE/QUARTO_GAME/QUARTO_GAME"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

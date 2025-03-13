@@ -1,0 +1,4 @@
+#ifndef QUARTOWIDGET_H
+#define QUARTOWIDGET_H
+
+#endif // QUARTOWIDGET_H
