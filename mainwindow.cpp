@@ -37,3 +37,22 @@ void MainWindow::createActions() {
 
 
 }
+
+void MainWindow::createMenu() {
+    QMenu *fileMenu = menuBar()->addMenu(tr("Fichier"));
+    fileMenu->addAction(_NouvellePartieAction);
+    fileMenu->addAction(_HistoriqueAction);
+    fileMenu->addSeparator();
+    fileMenu->addAction(_QuitterAction);
+
+
+    QMenu *editMenu = menuBar()->addMenu(tr("À propos"));
+    editMenu->addAction(_AboutQT);
+    editMenu->addAction(_AboutQuatro);
+}
+
+void MainWindow::nouvelle_partie() {
+    delete _quartowidget;
+    _quartowidget = new QuadrantWidget(this);
+    setCentralWidget(_quartowidget);
+}
