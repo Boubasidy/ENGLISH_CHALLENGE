@@ -56,3 +56,23 @@ void MainWindow::nouvelle_partie() {
     _quartowidget = new QuadrantWidget(this);
     setCentralWidget(_quartowidget);
 }
+
+
+void MainWindow::aboutQuarto(){
+    std::string str = "Application developed as part of the English Challenge.";
+
+    QMessageBox::about(this, tr("À propos de Quatro"), QString::fromStdString(str));
+}
+
+void MainWindow::aboutQT(){
+    QMessageBox::aboutQt(this,tr("À propos de QT"));
+}
+
+void MainWindow::Historique() {
+    std::string str="";
+    for (auto label : _quartowidget->getHistoricalLabels()) {
+        str += label->text().toStdString();
+        str += "\n";
+    }
+    QMessageBox::information(this, tr("Historique"), QString::fromStdString(str));
+}
