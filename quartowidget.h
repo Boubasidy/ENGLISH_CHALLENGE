@@ -26,6 +26,12 @@ public:
     }
     void writeLabelsToFile(const QString& filename, const std::vector<QLabel*>& labels);
 
+public slots:
+    void Choose_Piece();
+    void Place_Piece(int row,int col);
+    void Changement_joueur();
+    bool eventFilter(QObject *obj, QEvent *event);
+
 private:
     QIcon Iconselected;
     QHBoxLayout *piecesLayout;
