@@ -58,3 +58,5 @@ QuadrantWidget::QuadrantWidget(QWidget *parent)
             CLAIRE_PETIT_ROND_TROU->setStyleSheet("background-color: green;");
         });
     CLAIRE_PETIT_ROND_TROU->installEventFilter(this);
+
+    
