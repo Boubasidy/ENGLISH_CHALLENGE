@@ -59,4 +59,30 @@ QuadrantWidget::QuadrantWidget(QWidget *parent)
         });
     CLAIRE_PETIT_ROND_TROU->installEventFilter(this);
 
-    
+    QPushButton *CLAIRE_PETIT_ROND_PLEIN = new QPushButton;
+    painter.setBrush(QColor(253, 245, 172));
+    painter.drawEllipse(14, 14, 22, 22);
+    CLAIRE_PETIT_ROND_PLEIN->setIcon(QIcon(pix));
+    CLAIRE_PETIT_ROND_PLEIN->setIconSize(pix.size());
+    piecesLayout->addWidget(CLAIRE_PETIT_ROND_PLEIN);
+    connect(CLAIRE_PETIT_ROND_PLEIN, &QPushButton::clicked, this, &QuadrantWidget::Choose_Piece);
+    CLAIRE_PETIT_ROND_PLEIN->setObjectName("CLAIRE-PETIT-ROND-PLEIN");
+    connect(CLAIRE_PETIT_ROND_PLEIN, &QPushButton::clicked, this, [=]() {
+            CLAIRE_PETIT_ROND_PLEIN->setStyleSheet("background-color: green;");
+        });
+    CLAIRE_PETIT_ROND_PLEIN->installEventFilter(this);
+
+    QPushButton *CLAIRE_GRAND_ROND_TROU = new QPushButton;
+    painter.setBrush(QColor(253, 245, 172));
+    painter.drawEllipse(1, 1, 48, 48);
+    painter.setBrush(QColor(51, 25, 0));
+    painter.drawEllipse(23, 23, 4, 4);
+    CLAIRE_GRAND_ROND_TROU->setIcon(QIcon(pix));
+    CLAIRE_GRAND_ROND_TROU->setIconSize(pix.size());
+    piecesLayout->addWidget(CLAIRE_GRAND_ROND_TROU);
+    connect(CLAIRE_GRAND_ROND_TROU, &QPushButton::clicked, this, &QuadrantWidget::Choose_Piece);
+    CLAIRE_GRAND_ROND_TROU->setObjectName("CLAIRE-GRAND-ROND-TROU");
+    connect(CLAIRE_GRAND_ROND_TROU, &QPushButton::clicked, this, [=]() {
+            CLAIRE_GRAND_ROND_TROU->setStyleSheet("background-color: green;");
+        });
+    CLAIRE_GRAND_ROND_TROU->installEventFilter(this);
