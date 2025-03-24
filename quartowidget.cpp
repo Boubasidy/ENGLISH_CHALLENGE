@@ -115,3 +115,17 @@ QuadrantWidget::QuadrantWidget(QWidget *parent)
             CLAIRE_GRAND_CARRE_TROU->setStyleSheet("background-color: green;");
         });
     CLAIRE_GRAND_CARRE_TROU->installEventFilter(this);
+
+
+    QPushButton *CLAIRE_GRAND_CARRE_PLEIN = new QPushButton;
+    painter.setBrush(QColor(253, 245, 172));
+    painter.drawRect(1, 1, 48, 48);
+    CLAIRE_GRAND_CARRE_PLEIN->setIcon(QIcon(pix));
+    CLAIRE_GRAND_CARRE_PLEIN->setIconSize(pix.size());
+    piecesLayout->addWidget(CLAIRE_GRAND_CARRE_PLEIN);
+    connect(CLAIRE_GRAND_CARRE_PLEIN, &QPushButton::clicked, this, &QuadrantWidget::Choose_Piece);
+    CLAIRE_GRAND_CARRE_PLEIN->setObjectName("CLAIRE-GRAND-CARRE-PLEIN");
+    connect(CLAIRE_GRAND_CARRE_PLEIN, &QPushButton::clicked, this, [=]() {
+            CLAIRE_GRAND_CARRE_PLEIN->setStyleSheet("background-color: green;");
+        });
+    CLAIRE_GRAND_CARRE_PLEIN->installEventFilter(this);
