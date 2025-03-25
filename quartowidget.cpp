@@ -129,3 +129,27 @@ QuadrantWidget::QuadrantWidget(QWidget *parent)
             CLAIRE_GRAND_CARRE_PLEIN->setStyleSheet("background-color: green;");
         });
     CLAIRE_GRAND_CARRE_PLEIN->installEventFilter(this);
+
+    // dessins de couleur sombre
+    // initialisation d'un nouveau
+    QPixmap pix2(50, 50);
+    pix2.fill(Qt::transparent);
+    QPainter painter2(&pix2);
+    painter2.setPen(QColor(Qt::blue));
+    painter2.setBrush(QColor(251,251,251));
+
+
+    QPushButton *SOMBRE_PETIT_ROND_TROU = new QPushButton;
+    painter2.setBrush(QColor(51, 25, 0));
+    painter2.drawEllipse(14, 14, 22, 22);
+    painter2.setBrush(QColor(253, 245, 172));
+    painter2.drawEllipse(23, 23, 4, 4);
+    SOMBRE_PETIT_ROND_TROU->setIcon(QIcon(pix2));
+    SOMBRE_PETIT_ROND_TROU->setIconSize(pix2.size());
+    piecesLayout->addWidget(SOMBRE_PETIT_ROND_TROU);
+    connect(SOMBRE_PETIT_ROND_TROU, &QPushButton::clicked, this, &QuadrantWidget::Choose_Piece);
+    SOMBRE_PETIT_ROND_TROU->setObjectName("SOMBRE-PETIT-ROND-TROU");
+    connect(SOMBRE_PETIT_ROND_TROU, &QPushButton::clicked, this, [=]() {
+            SOMBRE_PETIT_ROND_TROU->setStyleSheet("background-color: green;");
+        });
+    SOMBRE_PETIT_ROND_TROU->installEventFilter(this);
