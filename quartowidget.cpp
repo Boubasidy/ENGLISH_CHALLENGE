@@ -153,3 +153,16 @@ QuadrantWidget::QuadrantWidget(QWidget *parent)
             SOMBRE_PETIT_ROND_TROU->setStyleSheet("background-color: green;");
         });
     SOMBRE_PETIT_ROND_TROU->installEventFilter(this);
+
+    QPushButton *SOMBRE_PETIT_ROND_PLEIN = new QPushButton;
+    painter2.setBrush(QColor(51, 25, 0));
+    painter2.drawEllipse(14, 14, 22, 22);
+    SOMBRE_PETIT_ROND_PLEIN->setIcon(QIcon(pix2));
+    SOMBRE_PETIT_ROND_PLEIN->setIconSize(pix2.size());
+    piecesLayout->addWidget(SOMBRE_PETIT_ROND_PLEIN);
+    connect(SOMBRE_PETIT_ROND_PLEIN, &QPushButton::clicked, this, &QuadrantWidget::Choose_Piece);
+    SOMBRE_PETIT_ROND_PLEIN->setObjectName("SOMBRE-PETIT-ROND-PLEIN");
+    connect(SOMBRE_PETIT_ROND_PLEIN, &QPushButton::clicked, this, [=]() {
+            SOMBRE_PETIT_ROND_PLEIN->setStyleSheet("background-color: green;");
+        });
+    SOMBRE_PETIT_ROND_PLEIN->installEventFilter(this);
