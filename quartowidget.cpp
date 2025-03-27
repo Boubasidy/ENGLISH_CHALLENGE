@@ -166,3 +166,18 @@ QuadrantWidget::QuadrantWidget(QWidget *parent)
             SOMBRE_PETIT_ROND_PLEIN->setStyleSheet("background-color: green;");
         });
     SOMBRE_PETIT_ROND_PLEIN->installEventFilter(this);
+
+    QPushButton *SOMBRE_PETIT_CARRE_TROU = new QPushButton;
+    painter2.setBrush(QColor(51, 25, 0));
+    painter2.drawRect(14, 14, 22, 22);
+    painter2.setBrush(QColor(253, 245, 172));
+    painter2.drawEllipse(23, 23, 4, 4);
+    SOMBRE_PETIT_CARRE_TROU->setIcon(QIcon(pix2));
+    SOMBRE_PETIT_CARRE_TROU->setIconSize(pix2.size());
+    piecesLayout->addWidget(SOMBRE_PETIT_CARRE_TROU);
+    connect(SOMBRE_PETIT_CARRE_TROU, &QPushButton::clicked, this, &QuadrantWidget::Choose_Piece);
+    SOMBRE_PETIT_CARRE_TROU->setObjectName("SOMBRE-PETIT-CARRE-TROU");
+    connect(SOMBRE_PETIT_CARRE_TROU, &QPushButton::clicked, this, [=]() {
+            SOMBRE_PETIT_CARRE_TROU->setStyleSheet("background-color: green;");
+        });
+    SOMBRE_PETIT_CARRE_TROU->installEventFilter(this);
