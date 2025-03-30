@@ -1,9 +1,18 @@
-#include <iostream>
+#include "mainwindow.h"
+#include <QApplication>
+#include <QTranslator>
 
-using namespace std;
-
-int main()
+int main(int argc, char *argv[])
 {
-    cout << "Hello World!" << endl;
-    return 0;
+    QApplication app(argc, argv);
+    QTranslator translator;
+    if(translator.load(QLocale::system(), "Annotations", "_", app.applicationDirPath(), ".qm")) {
+        app.installTranslator(&translator);
+    }
+    MainWindow w;
+    w.setWindowTitle("Quatro");
+    w.setWindowIcon(QIcon("Bureau/projet/images/Quarto.jpg"));
+    w.show();
+
+    return app.exec();
 }

@@ -483,5 +483,37 @@ button->setCheckable(false);
 
 }
 
+bool QuadrantWidget::eventFilter(QObject* obj, QEvent* event){
+    if (event->type() == QEvent::HoverEnter) {
+        QPushButton* button = qobject_cast<QPushButton*>(obj);
+        if (button) {
+            button->setStyleSheet("background-color: blue;");
+        }
+    } else if (event->type() == QEvent::HoverLeave) {
+        QPushButton* button = qobject_cast<QPushButton*>(obj);
+        if (button) {
+            button->setStyleSheet("background-color: green");
+        }
+    }
+    return false;
+}
 
+
+// la fonction est destiné à la géneration du fichier log mais elle n'a pas fonctionné
+void QuadrantWidget::writeLabelsToFile(const QString& filename, const std::vector<QLabel*>& labels) {
+ QFile file(filename);
+ if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+     qDebug() << "Erreur : Impossible d'ouvrir le fichier pour l'écriture.";
+     return;
+ }
+ QTextStream out(&file);
+ for (const auto& label : labels) {
+     out << label->text() << "\n";
+ }
+ file.close();
+}
+
+void QuadrantWidget::Changement_joueur(){
+ PlayerNumber = (PlayerNumber == 1) ? 2 : 1;
+}
     
