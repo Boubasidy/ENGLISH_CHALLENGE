@@ -478,7 +478,7 @@ void QuadrantWidget::Place_Piece(int row, int col) {
 
             }
 }
-
+//
 button->setCheckable(false);
 
 }
